@@ -1,0 +1,12 @@
+language: generic
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t ng254/docker-react -f Dockerfile.dev .
+
+# series of commands to run for
+# tests to be executed
+script:
+    - docker run -e CI=true ng254/docker-react yarn test -- -- coverage
