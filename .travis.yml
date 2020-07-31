@@ -9,4 +9,4 @@ before_install:
 # series of commands to run for
 # tests to be executed
 script:
-    - docker run -e CI=true ng254/docker-react yarn test -- -- coverage
+    - docker run -e CI=true ng254/docker-react yarn test
